@@ -1,6 +1,6 @@
 # dotfiles
 
-My OS X dotfiles.
+My macOS dotfiles.
 
 
 ## How to install
