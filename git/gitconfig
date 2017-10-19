@@ -1,0 +1,51 @@
+[alias]
+    a = add
+    aa = add --all
+
+    # Diff what is staged for the next commit
+    diffc = diff --cached
+
+    c = commit
+    ca = commit -a
+    cm = commit -m
+    cam = commit -am
+
+    co = checkout
+    cob = checkout -b
+
+    f = fetch
+    fo = fetch origin
+    fu = fetch upstream
+
+    s = status
+
+    branch-name = rev-parse --abbrev-ref HEAD
+    publish = "!git push --set-upstream origin $(git branch-name)"
+
+[core]
+    pager = "diff-so-fancy | less --tabs=4 -RFX"
+    # Use custom `.gitignore` and `.gitattributes`
+    excludesfile = ~/.gitignore
+    attributesfile = ~/.gitattributes
+
+[push]
+    default = simple
+
+[color]
+    # color opts: normal, black, red, green, yellow, blue, magenta, cyan, or white
+    ui = true
+    interactive = auto
+
+[color "diff"]
+    meta = "227"
+    frag = "magenta bold"
+    commit = "227 bold"
+    old = "red bold"
+    new = "green bold"
+    whitespace = "red reverse"
+
+[color "diff-highlight"]
+    oldNormal = "red bold"
+    oldHighlight = "red bold 52"
+    newNormal = "green bold"
+    newHighlight = "green bold 22"
